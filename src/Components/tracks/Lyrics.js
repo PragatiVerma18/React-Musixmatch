@@ -66,11 +66,11 @@ class Lyrics extends Component {
 							<strong>Album ID</strong>: {track.album_id}
 						</li>
 						<li className='list-group-item'>
-							<strong>Music Genre</strong>:{' '}
-							{
-								track.primary_genres.music_genre_list[0].music_genre
-									.music_genre_name
-							}
+							<strong>Music Genre</strong>:
+							{track.primary_genres.music_genre_list.length === 0
+								? 'NO GENRE AVAILABLE'
+								: track.primary_genres.music_genre_list[0].music_genre
+										.music_genre_name}
 						</li>
 						<li className='list-group-item'>
 							<strong>Explicit Words</strong>:
